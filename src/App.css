@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+#app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.restart {
+  font-size: 1.2em;
+  font-weight: 800;
+  margin-bottom: 2em;
+  padding: .55em 1em .4em 1em;
+  background-color: transparent;
+  color: rgba(34, 200, 200, 0.85);
+  border: 5px solid rgba(34, 200, 200, 0.85);
+  border-radius: 1px;
+  transition: 250ms ease;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.restart:hover {
+  background-color: rgb(34, 130, 130);
+  color: white;
+  transition: 250ms ease;
+}
+
+#board {
+  height: 20em;
+  width: 20em;
+  padding: .25em;
+  background-color: blanchedalmond;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: .25em;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: .25em;
+}
+
+.square {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+  font-size: 4.1em;
+  font-weight: 700;
+}
+
+#winner {
+  height: 100%;
+  width: 100%;
+  max-height: 20em;
+  max-width: 20em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
